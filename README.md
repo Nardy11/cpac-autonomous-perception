@@ -4,8 +4,9 @@
 camera/LiDAR/stereo ranging on ROS 1, built for a cooperative-perception car.**
 Bachelor project *Cooperative Perception and Control for Connected Vehicles* (2024).
 
-**▶ Demo:** the fine-tuned detector runs entirely in the browser (ONNX Runtime Web, no server); see [`demo/`](demo) and *Demo locally* below. The GitHub Pages deployment is coming soon.
+**[▶ Live demo](https://nardy11.github.io/cpac-autonomous-perception/)**: the fine-tuned detector running in your browser (ONNX Runtime Web, no server).
 
+[![Live demo](https://img.shields.io/badge/demo-live-1f6fd1)](https://nardy11.github.io/cpac-autonomous-perception/)
 ![Python](https://img.shields.io/badge/python-3.9--3.11-3776ab)
 ![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-111)
 ![OpenVINO](https://img.shields.io/badge/OpenVINO-CPU-0068b5)
@@ -135,7 +136,7 @@ On 7 public-domain street photos from Wikimedia Commons (no labels, so these are
 accuracy, at conf 0.15), the fine-tuned model found far fewer objects than the stock COCO YOLOv8n.
 On a busy motorway it found 5 cars where the baseline found 41 cars and 6 trucks. It also predicted
 a spurious **`train`** in 4 of the 7 photos. A small dataset, 10 epochs and full fine-tuning likely
-cost much of the COCO knowledge (catastrophic forgetting). The browser demo in [`demo/`](demo)
+cost much of the COCO knowledge (catastrophic forgetting). The [live demo](https://nardy11.github.io/cpac-autonomous-perception/)
 lets you compare the two models on any image.
 
 ### Detection logs from the weekly test runs
