@@ -1,0 +1,19 @@
+# Core: detection, tracking, OpenCV lane detection, benchmark (Python 3.9-3.11)
+ultralytics>=8.1          # YOLOv8 (the weights were trained with 8.1.27)
+torch>=2.0
+opencv-python>=4.8
+numpy
+pandas
+cvzone
+matplotlib
+onnxruntime>=1.17         # ONNX backend for detection/benchmark_fps.py
+openvino>=2024.0          # OpenVINO backend
+
+# Optional, per module (install what you need):
+# tensorflow>=2.12, moviepy<2      -> lane_detection/lane_cnn_steering.py, detection/tf2/
+# tf-models-official / TF Object Detection API -> detection/tf2/
+# pyrealsense2                     -> sensors/realsense_*.py, ROS camera_publisher.py
+# pyzed (ZED SDK installer)        -> sensors/zed_detect_distance.py
+# pygame                           -> sensors/lidar_visualizer.py
+# firebase-admin, flask, flask-cors -> sensors/lidar_firebase_sender.py, ros mjpeg_server.py
+# rospy, cv_bridge                 -> ros/ (ROS 1 Noetic, installed via apt, not pip)

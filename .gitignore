@@ -1,0 +1,31 @@
+# model weights and media live in the GitHub Release (v1.0.0), never in git
+*.pt
+*.onnx
+*.h5
+*.bin
+*_openvino_model/
+weights/
+demo/model/
+*.tfrecord
+ckpt-*
+*.avi
+*.mp4
+*.docx
+
+# run outputs
+*_outputs*.csv
+frame_*_object_*.jpg
+frame_*object*.jpg
+runs/
+
+# secrets
+*firebase-adminsdk*.json
+service-account*.json
+.env
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
