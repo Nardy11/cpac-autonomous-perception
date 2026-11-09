@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>ros_opencv</name>
+  <version>1.0.0</version>
+  <description>CPAC perception nodes: camera publishers, YOLOv8/OpenVINO detection with tracking, lane detection, custom detection messages.</description>
+  <maintainer email="102429234+Nardy11@users.noreply.github.com">Nardy Michelle</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>message_generation</build_depend>
+  <exec_depend>message_runtime</exec_depend>
+  <depend>cv_bridge</depend>
+  <depend>image_transport</depend>
+  <depend>roscpp</depend>
+  <depend>rospy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+</package>
