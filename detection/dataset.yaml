@@ -1,0 +1,30 @@
+# train: ../data/images
+# val: ../data/images
+# test: ../data/images
+
+path: datasets/coco128 # dataset root dir
+train: images/train2017 # train images (relative to 'path') 128 images
+val: images/train2017 # val images (relative to 'path') 128 images
+test: # test images (optional)
+
+names:
+  0: person
+  1: bicycle
+  2: car
+  3: motorcycle
+  4: bus
+  5: train
+  6: truck
+  7: traffic light
+  8: stop sign
+  9: cat
+  10: dog
+  11: fence
+  12: cone
+
+roboflow:
+  workspace: yolov5-euqqq
+  project: car-obsticles
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/yolov5-euqqq/car-obsticles/dataset/1ss

@@ -1,0 +1,65 @@
+item {
+    name: "bicycle",
+    id: 1,
+    display_name: "bicycle"
+}
+item {
+    name: "bus",
+    id: 2,
+    display_name: "bus"
+}
+item {
+    name: "car",
+    id: 3,
+    display_name: "car"
+}
+item {
+    name: "cat",
+    id: 4,
+    display_name: "cat"
+}
+item {
+    name: "cone",
+    id: 5,
+    display_name: "cone"
+}
+item {
+    name: "dog",
+    id: 6,
+    display_name: "dog"
+}
+item {
+    name: "fence",
+    id: 7,
+    display_name: "fence"
+}
+item {
+    name: "motorcycle",
+    id: 8,
+    display_name: "motorcycle"
+}
+item {
+    name: "person",
+    id: 9,
+    display_name: "person"
+}
+item {
+    name: "stop sign",
+    id: 10,
+    display_name: "stop sign"
+}
+item {
+    name: "traffic light",
+    id: 11,
+    display_name: "traffic light"
+}
+item {
+    name: "train",
+    id: 12,
+    display_name: "train"
+}
+item {
+    name: "truck",
+    id: 13,
+    display_name: "truck"
+}
