@@ -139,6 +139,26 @@ a spurious **`train`** in 4 of the 7 photos. A small dataset, 10 epochs and full
 cost much of the COCO knowledge (catastrophic forgetting). The browser demo in [`demo/`](demo)
 lets you compare the two models on any image.
 
+### Detection logs from the weekly test runs
+
+During weeks 3–5 each detector logged every detection to a CSV file: class, box corners, size,
+centre, and the **monocular distance estimate** worked out from the box size. These are the
+project's original logs, unchanged, in [`docs/detection-logs/`](docs/detection-logs/).
+
+![Detections by class and distance estimates from the three test runs](docs/assets/detection_logs.png)
+
+| Run (log file) | Detections | Classes logged | Distance estimate, median (range) |
+|---|---|---|---|
+| YOLOv5s, week 3 ([csv](docs/detection-logs/yolov5_outputs.csv)) | 143 | person 123, motorcycle 16, truck 4 | 74 cm (65–160) |
+| YOLOv8n, week 4 ([csv](docs/detection-logs/yolov8_outputs.csv)) | 286 | person 284, train 1, cat 1 | 87 cm (28–170) |
+| TF2 SSD-MobileNet, week 5 ([csv](docs/detection-logs/tf2_ssd_outputs.csv)) | 137 | person 137 | 113 cm (97–122) |
+
+Each run is a **separate recording**, so this isn't a head-to-head accuracy comparison. What the logs
+do show:
+- the full pipeline worked end to end: detect → measure the box → estimate the distance → log;
+- the distance estimate tracks a person stepping closer and further away (YOLOv8n, detections ~150–270);
+- one-off false classes ("train", "cat") match the false "train" seen in the check above.
+
 ### Not measured: experiments to rerun
 
 * **Held-out test mAP** for YOLOv5s, YOLOv8n and SSD on the Roboflow split (`model.val(split="test")`);
