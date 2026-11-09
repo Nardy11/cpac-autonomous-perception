@@ -254,7 +254,7 @@ LANE_MODEL=/path/lane_cnn_model.h5 rosrun ros_opencv camera_LaneDetection_mono.p
 | `yolov5s_custom_last.pt` | Custom 13-class YOLOv5s (load with `torch.hub.load('ultralytics/yolov5', 'custom', ...)`) |
 | `yolov8n_coco.pt` / `.onnx`, `yolov8n_coco_openvino_model.zip` | Stock Ultralytics COCO YOLOv8n (baseline; the OpenVINO IR is the one the project used) |
 | `lane_cnn_model.h5` | Keras lane-segmentation model used by the lane scripts (160×80 input) |
-| `detection_tracking_demo.mp4` | Full 2 min test recording of detection + tracking (640×360, H.264) |
+| `detection_tracking_demo.mp4` | Full 2 min test recording of detection + tracking (original 320×180, H.264) |
 
 ## My role
 
