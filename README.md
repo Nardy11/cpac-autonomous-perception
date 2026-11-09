@@ -15,8 +15,7 @@ Bachelor project *Cooperative Perception and Control for Connected Vehicles* (20
 ![Detection and tracking on the project's test recording](docs/assets/hero_tracking.gif)
 
 <sub>The project's own recording: YOLOv8n (OpenVINO) detections with Euclidean-tracker IDs (blue), box
-centres and distance read-outs. The frames are pixelated for privacy; the overlays are the original
-pipeline output.</sub>
+centres and distance read-outs, straight from the pipeline. Shown with the consent of the people in it.</sub>
 
 | Close-range detection | Track IDs over time | Multiple tracked people |
 |---|---|---|
@@ -203,7 +202,7 @@ mkdir weights && gh release download v1.0.0 -D weights   # or download the asset
 python detection/yolov8_detect_distance.py --weights weights/yolov8n_custom_last.pt --source 0
 python detection/yolov5_detect_distance.py --weights weights/yolov5s_custom_last.pt --source road.mp4
 python detection/yolov8n_openvino_detect.py --source road.mp4          # exports yolov8n to OpenVINO first
-python detection/benchmark_fps.py --video weights/detection_tracking_demo_anonymized.mp4 \
+python detection/benchmark_fps.py --video weights/detection_tracking_demo.mp4 \
   --models weights/yolov8n_custom_last.pt weights/yolov8n_custom_last.onnx weights/yolov8n_custom_last_openvino_model
 python detection/tf2/ssd_mobilenet_webcam.py --tfod-root /path/to/Tensorflow   # needs the TF Object Detection API
 ```
@@ -255,7 +254,7 @@ LANE_MODEL=/path/lane_cnn_model.h5 rosrun ros_opencv camera_LaneDetection_mono.p
 | `yolov5s_custom_last.pt` | Custom 13-class YOLOv5s (load with `torch.hub.load('ultralytics/yolov5', 'custom', ...)`) |
 | `yolov8n_coco.pt` / `.onnx`, `yolov8n_coco_openvino_model.zip` | Stock Ultralytics COCO YOLOv8n (baseline; the OpenVINO IR is the one the project used) |
 | `lane_cnn_model.h5` | Keras lane-segmentation model used by the lane scripts (160×80 input) |
-| `detection_tracking_demo_anonymized.mp4` | Full 2 min test recording of detection + tracking, pixelated for privacy |
+| `detection_tracking_demo.mp4` | Full 2 min test recording of detection + tracking (640×360, H.264) |
 
 ## My role
 
